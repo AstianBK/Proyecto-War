@@ -1,6 +1,8 @@
 package com.TBK.ProyectoW.common.registry;
 
 import com.TBK.ProyectoW.ProyectoWar;
+import com.TBK.ProyectoW.common.items.Factions;
+import com.TBK.ProyectoW.common.items.TemplateWarhammerItem;
 import com.TBK.ProyectoW.common.items.WarHammerArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterials;
@@ -25,4 +27,7 @@ public class PWItems {
     public static final RegistryObject<Item> WARHAMMER_BOOT = ITEMS.register("warhammer_boost",
             ()-> new WarHammerArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.FEET,
                     new Item.Properties()));
+    //TRIM
+    public static final RegistryObject<Item> ROYAL_ZEALOT_TRIM = ITEMS.register("royal_zealot_trim",
+            ()-> new TemplateWarhammerItem(new Item.Properties(), Factions.ROYAL_ZEALOT));
 }

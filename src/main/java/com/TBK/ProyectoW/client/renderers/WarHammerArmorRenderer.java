@@ -64,10 +64,12 @@ public class WarHammerArmorRenderer<T extends WarHammerArmorItem> extends GeoArm
         float green = 1.0F;
         float blue = 1.0F;
         if(this.itemStack.getItem() instanceof DyeableLeatherItem dyeableLeatherItem && dyeableLeatherItem.hasCustomColor(this.itemStack)){
-            int i = dyeableLeatherItem.getColor(this.itemStack);
-            red = (float)(i >> 16 & 255)/255;
-            green = (float)(i >> 8 & 255)/255;
-            blue = (float)(i & 255)/255;
+            if(dyeableLeatherItem.getColor(this.itemStack)!=0){
+                int i = dyeableLeatherItem.getColor(this.itemStack);
+                red = (float)(i >> 16 & 255)/255;
+                green = (float)(i >> 8 & 255)/255;
+                blue = (float)(i & 255)/255;
+            }
         }
 
         RenderType renderType = getRenderType(this.currentArmorItem, partialTick, poseStack, null, buffer, packedLight,
