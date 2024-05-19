@@ -20,6 +20,7 @@ import software.bernie.geckolib3.core.util.Color;
 import software.bernie.geckolib3.geo.render.built.GeoModel;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
+import software.bernie.geckolib3.renderers.geo.GeoLayerRenderer;
 import software.bernie.geckolib3.util.EModelRenderCycle;
 
 import java.util.Arrays;
@@ -87,16 +88,5 @@ public class WarHammerArmorRenderer<T extends WarHammerArmorItem> extends GeoArm
             PatchouliCompat.patchouliLoaded(poseStack);
 
         poseStack.popPose();
-    }
-
-    @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-        if(this.itemStack.getItem() instanceof DyeableLeatherItem dyeableLeatherItem){
-            int i = dyeableLeatherItem.getColor(this.itemStack);
-            red = (float)(i >> 16 & 255);
-            green = (float)(i >> 8 & 255);
-            blue = (float)(i & 255);
-        }
-        super.renderToBuffer(poseStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 }
