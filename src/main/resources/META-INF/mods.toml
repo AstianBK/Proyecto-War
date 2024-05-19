@@ -6,7 +6,7 @@ license="${mod_license}"
 
 [[mods]] #mandatory
 
-modId="${mod_id}" #mandatory
+modId="proyecto_war" #mandatory
 
 version="${mod_version}" #mandatory
 
@@ -16,7 +16,7 @@ authors="${mod_authors}" #optional
 
 description='''${mod_description}'''
 
-[[dependencies."${mod_id}"]] #optional
+[[dependencies.proyecto_war]] #optional
 
 modId="forge" #mandatory
 
@@ -28,7 +28,7 @@ ordering="NONE"
 
 side="BOTH"
 
-[[dependencies."${mod_id}"]]
+[[dependencies.proyecto_war]]
 modId="minecraft"
 mandatory=true
 versionRange="${minecraft_version_range}"
