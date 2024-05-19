@@ -1,5 +1,6 @@
 package com.TBK.ProyectoW;
 
+import com.TBK.ProyectoW.common.registry.PWItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
@@ -35,7 +36,7 @@ public class ProyectoWar
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-
+        PWItems.ITEMS.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
