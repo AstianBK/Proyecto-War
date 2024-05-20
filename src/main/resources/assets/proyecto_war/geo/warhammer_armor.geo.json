@@ -89,7 +89,7 @@
 						{"origin": [4, 19.5, -4.5], "size": [8, 8, 9], "inflate": -0.15, "uv": [0, 32], "mirror": true},
 						{"origin": [4, 19.5, -4.5], "size": [2, 8, 9], "uv": [26, 41], "mirror": true},
 						{"origin": [6, 19.5, -4.5], "size": [6, 2, 9], "uv": [0, 50], "mirror": true},
-						{"origin": [4, 11.5, -2.5], "size": [5.5, 8, 5], "uv": [32, 27], "mirror": true}
+						{"origin": [3.75, 11.5, -2.5], "size": [5.5, 8, 5], "uv": [32, 27], "mirror": true}
 					]
 				},
 				{
