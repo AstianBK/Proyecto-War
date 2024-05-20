@@ -2,7 +2,6 @@ package com.TBK.ProyectoW.common.registry;
 
 import com.TBK.ProyectoW.ProyectoWar;
 import com.TBK.ProyectoW.common.items.Factions;
-import com.TBK.ProyectoW.common.items.PWCreativeModeTab;
 import com.TBK.ProyectoW.common.items.TemplateWarhammerItem;
 import com.TBK.ProyectoW.common.items.WarHammerArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -25,7 +24,7 @@ public class PWItems {
     public static final RegistryObject<Item> WARHAMMER_LEGGINGS= ITEMS.register("warhammer_leggings",
             ()-> new WarHammerArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.LEGS,
                     props()));
-    public static final RegistryObject<Item> WARHAMMER_BOOT = ITEMS.register("warhammer_boost",
+    public static final RegistryObject<Item> WARHAMMER_BOOT = ITEMS.register("warhammer_boot",
             ()-> new WarHammerArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.FEET,
                     props()));
     //TRIM

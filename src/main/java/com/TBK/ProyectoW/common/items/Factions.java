@@ -27,8 +27,8 @@ public enum Factions {
         this.textureChange=textureChange;
         this.detailEye=detailEye;
     }
-    public ResourceLocation getResourceLocation() {
-        return new ResourceLocation(ProyectoWar.MODID,"textures/armor/faction/"+this.name+"_trim.png");
+    public String getName() {
+        return this.name;
     }
     public boolean hasDetailGolden(){
         return this.detailGolden;
@@ -38,5 +38,8 @@ public enum Factions {
     }
     public boolean hasChangeTextures(){
         return this.textureChange;
+    }
+    public static Factions getForName(String name){
+        return Factions.valueOf(Factions.class,name);
     }
 }

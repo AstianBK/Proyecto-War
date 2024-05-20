@@ -1,6 +1,7 @@
 package com.TBK.ProyectoW;
 
 import com.TBK.ProyectoW.common.registry.PWItems;
+import com.TBK.ProyectoW.common.registry.PWtemProperties;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;

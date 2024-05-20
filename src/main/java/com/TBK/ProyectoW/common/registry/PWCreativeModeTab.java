@@ -1,4 +1,4 @@
-package com.TBK.ProyectoW.common.items;
+package com.TBK.ProyectoW.common.registry;
 
 import com.TBK.ProyectoW.common.registry.PWItems;
 import com.google.common.collect.Ordering;

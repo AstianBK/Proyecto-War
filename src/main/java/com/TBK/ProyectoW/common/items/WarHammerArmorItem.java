@@ -1,16 +1,12 @@
 package com.TBK.ProyectoW.common.items;
 
-import com.TBK.ProyectoW.client.renderers.WarHammerArmorRenderer;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -19,12 +15,9 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 import software.bernie.geckolib3.item.GeoArmorItem;
-import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 import software.bernie.geckolib3.util.GeckoLibUtil;
 
 import java.util.List;
-import java.util.Stack;
-import java.util.function.Consumer;
 
 
 public class WarHammerArmorItem extends GeoArmorItem implements IAnimatable, DyeableLeatherItem {
@@ -35,23 +28,40 @@ public class WarHammerArmorItem extends GeoArmorItem implements IAnimatable, Dye
         super(materialIn, slot, builder);
     }
 
+    @Override
+    public void inventoryTick(ItemStack p_41404_, Level p_41405_, Entity p_41406_, int p_41407_, boolean p_41408_) {
+        if(!p_41405_.isClientSide){
+            this.setFaction(this.getFaction(p_41404_));
+        }
+        super.inventoryTick(p_41404_, p_41405_, p_41406_, p_41407_, p_41408_);
+    }
+
     public Factions getFaction(ItemStack stack) {
         Factions faction=Factions.NONE;
-        if(stack.getOrCreateTag().contains("faction")){
-            String name = stack.getOrCreateTag().getString("faction");
-            faction=Factions.valueOf(name);
+        CompoundTag nbt=stack.getOrCreateTag();
+        if(nbt.contains("faction")){
+            String name = nbt.getString("faction");
+            faction=Factions.getForName(name.toUpperCase());
+            this.faction=faction;
         }
         return faction;
     }
 
-    public void setFaction(Factions faction, ItemStack stack){
-        CompoundTag nbt=stack.getOrCreateTag();
+    public Factions getFaction() {
+        return this.faction;
+    }
+
+    public void setFaction(Factions faction){
         this.faction=faction;
-        this.saveFaction(stack,faction.name());
+    }
+
+    public void setFaction(Factions faction, ItemStack stack){
+        this.faction=faction;
+        this.saveFaction(stack,this.faction.name());
     }
     public CompoundTag saveFaction(ItemStack stack,String name){
         CompoundTag nbt=stack.getOrCreateTag();
-        nbt.putString(name,"faction");
+        nbt.putString("faction",name);
         return nbt;
     }
 
@@ -74,7 +84,6 @@ public class WarHammerArmorItem extends GeoArmorItem implements IAnimatable, Dye
     public void appendHoverText(ItemStack p_41421_, @Nullable Level p_41422_, List<Component> p_41423_, TooltipFlag p_41424_) {
         super.appendHoverText(p_41421_, p_41422_, p_41423_, p_41424_);
         p_41423_.add(Component.translatable("factions.decrip"));
-        p_41423_.add(Component.translatable("factions."+this.faction.name()).withStyle(ChatFormatting.BLUE));
-
+        p_41423_.add(Component.translatable("factions."+this.getFaction(p_41421_).getName()).withStyle(ChatFormatting.BLUE));
     }
 }
