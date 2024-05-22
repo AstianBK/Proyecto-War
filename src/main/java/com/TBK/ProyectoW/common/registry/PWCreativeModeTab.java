@@ -30,8 +30,16 @@ public class PWCreativeModeTab {
     };
 
     public static void PreOrdenInit(){
-        List<Item> itemList= Arrays.asList(PWItems.WARHAMMER_HELMET.get(),PWItems.WARHAMMER_CHEST.get(), PWItems.WARHAMMER_LEGGINGS.get(),PWItems.WARHAMMER_BOOT.get()
-        ,PWItems.ROYAL_ZEALOT_TRIM_TEMPLATE.get(),PWItems.SILVER_SKULL_TRIM_TEMPLATE.get());
+        List<Item> itemList= Arrays.asList(
+                PWItems.WARHAMMER_HELMET.get(),
+                PWItems.WARHAMMER_CHEST.get(),
+                PWItems.WARHAMMER_LEGGINGS.get(),PWItems.WARHAMMER_BOOT.get(),
+                PWItems.ROYAL_ZEALOT_TRIM_TEMPLATE.get(),
+                PWItems.SILVER_SKULL_TRIM_TEMPLATE.get(),
+                PWItems.PROTO_SUIT_TRIM_TEMPLATE.get(),
+                PWItems.INFERNAL_CHAOS_TRIM_TEMPLATE.get(),
+                PWItems.HOLY_CRUSADER_TRIM_TEMPLATE.get(),
+                PWItems.MARINE_ARMOR_SMITHING_TEMPLATE.get());
 
         stackComparator= Ordering.explicit(itemList).onResultOf(ItemStack::getItem);
     }

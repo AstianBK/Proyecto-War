@@ -1,20 +1,15 @@
 package com.TBK.ProyectoW.common.items;
 
-import com.TBK.ProyectoW.ProyectoWar;
-import com.google.common.collect.ImmutableMultimap;
-import com.ibm.icu.impl.coll.Collation;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.saveddata.maps.MapBanner;
-
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-
 public enum Factions {
     NONE(null,false,false,false),
     ROYAL_ZEALOT("royal_zealot",true,false,false),
+    PROTO_SUIT("proto_suit",true,true,false),
+    INFERNAL_CHAOS("infernal_chaos",true,true,false),
     SILVER_SKULL("silver_skull",true,true,false);
+
+
+
+
 
     private final String name;
     private final boolean detailGolden;

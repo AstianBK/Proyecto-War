@@ -28,9 +28,20 @@ public class PWItems {
             ()-> new WarHammerArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.FEET,
                     props()));
     //TRIM
+
+    public static final RegistryObject<Item> MARINE_ARMOR_SMITHING_TEMPLATE = ITEMS.register("marine_armor_smithing_template",
+            ()-> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ROYAL_ZEALOT_TRIM_TEMPLATE = ITEMS.register("royal_zealot_trim_template",
             ()-> new TemplateWarhammerItem(props(), Factions.ROYAL_ZEALOT));
 
+    public static final RegistryObject<Item> PROTO_SUIT_TRIM_TEMPLATE = ITEMS.register("proto_suit_trim_template",
+            ()-> new TemplateWarhammerItem(props(), Factions.PROTO_SUIT));
+
+    public static final RegistryObject<Item> INFERNAL_CHAOS_TRIM_TEMPLATE = ITEMS.register("infernal_chaos_trim_template",
+            ()-> new TemplateWarhammerItem(props(), Factions.INFERNAL_CHAOS));
+
+    public static final RegistryObject<Item> HOLY_CRUSADER_TRIM_TEMPLATE = ITEMS.register("holy_crusader_trim_template",
+            ()-> new TemplateWarhammerItem(props(), Factions.NONE));
     public static final RegistryObject<Item> SILVER_SKULL_TRIM_TEMPLATE = ITEMS.register("silver_skull_trim_template",
             ()-> new TemplateWarhammerItem(props(), Factions.SILVER_SKULL));
 
