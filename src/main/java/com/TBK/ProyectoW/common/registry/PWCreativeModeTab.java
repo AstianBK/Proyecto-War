@@ -39,7 +39,8 @@ public class PWCreativeModeTab {
                 PWItems.PROTO_SUIT_TRIM_TEMPLATE.get(),
                 PWItems.INFERNAL_CHAOS_TRIM_TEMPLATE.get(),
                 PWItems.HOLY_CRUSADER_TRIM_TEMPLATE.get(),
-                PWItems.MARINE_ARMOR_SMITHING_TEMPLATE.get());
+                PWItems.MARINE_ARMOR_SMITHING_TEMPLATE.get()
+        );
 
         stackComparator= Ordering.explicit(itemList).onResultOf(ItemStack::getItem);
     }

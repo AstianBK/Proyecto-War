@@ -30,7 +30,7 @@ public class PWItems {
     //TRIM
 
     public static final RegistryObject<Item> MARINE_ARMOR_SMITHING_TEMPLATE = ITEMS.register("marine_armor_smithing_template",
-            ()-> new Item(new Item.Properties().stacksTo(1)));
+            ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ROYAL_ZEALOT_TRIM_TEMPLATE = ITEMS.register("royal_zealot_trim_template",
             ()-> new TemplateWarhammerItem(props(), Factions.ROYAL_ZEALOT));
 

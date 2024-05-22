@@ -29,7 +29,7 @@ public class EyeLayer<T extends WarHammerArmorItem> extends GeoItemLayerRenderer
 
             getRenderer().render(model,(T)armor,partialTicks,renderType,
                     matrixStackIn,pBuffer, consumer,packedLightIn, OverlayTexture.NO_OVERLAY,
-                    1.0F,1.0F,1.0F,1.0F);
+                    1.1F,1.0F,1.0F,1.0F);
         }
     }
 
