@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:diamond_leggings"
+  },
+  "addition": {
+    "item": "proyecto_war:marine_armor_smithing_template"
+  },
+  "result": {
+    "item": "proyecto_war:warhammer_leggings"
+  }
+}
