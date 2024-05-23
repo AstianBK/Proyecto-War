@@ -41,8 +41,8 @@ public class WarHammerArmorRenderer<T extends WarHammerArmorItem> extends GeoArm
     
     public WarHammerArmorRenderer() {
         super(new WarHammerArmorModel<>());
-        this.addLayer(new GoldenDetailsLayer<>(this));
         this.addLayer(new EyeLayer<>(this));
+        this.addLayer(new GoldenDetailsLayer<>(this));
         this.headBone = "armorHead";
         this.bodyBone = "armorBody";
         this.rightArmBone = "armorRightArm";
@@ -52,6 +52,7 @@ public class WarHammerArmorRenderer<T extends WarHammerArmorItem> extends GeoArm
         this.rightBootBone = "armorRightBoot";
         this.leftBootBone = "armorLeftBoot";
     }
+
     public void render(float partialTick, PoseStack poseStack, VertexConsumer buffer, int packedLight) {
         GeoModel model = this.getGeoModelProvider().getModel(this.getGeoModelProvider().getModelResource(this.currentArmorItem));
         AnimationEvent animationEvent = new AnimationEvent(this.currentArmorItem, 0, 0,
@@ -95,7 +96,7 @@ public class WarHammerArmorRenderer<T extends WarHammerArmorItem> extends GeoArm
 
         if (!this.entityLiving.isSpectator()) {
             for (GeoItemLayerRenderer<T> layerRenderer : this.layerRenderers) {
-                renderLayer(this.getGeoModelProvider().getModel(this.getGeoModelProvider().getModelResource(this.currentArmorItem)), poseStack, bufferSource, packedLight, this.entityLiving, 0, 0, partialTick, ageInTicks,
+                renderLayer(model, poseStack, bufferSource, packedLight, this.entityLiving, 0, 0, partialTick, ageInTicks,
                         0, 0, bufferSource, layerRenderer);
             }
         }
@@ -105,6 +106,7 @@ public class WarHammerArmorRenderer<T extends WarHammerArmorItem> extends GeoArm
 
         poseStack.popPose();
     }
+
     @Override
     public void renderRecursively(GeoBone bone, PoseStack poseStack, VertexConsumer buffer, int packedLight,
                                   int packedOverlay, float red, float green, float blue, float alpha) {
@@ -125,17 +127,13 @@ public class WarHammerArmorRenderer<T extends WarHammerArmorItem> extends GeoArm
         poseStack.popPose();
     }
 
-    @Override
-    public RenderType getRenderType(T animatable, float partialTick, PoseStack poseStack, @Nullable MultiBufferSource bufferSource, @Nullable VertexConsumer buffer, int packedLight, ResourceLocation texture) {
-        return super.getRenderType(animatable, partialTick, poseStack, bufferSource, buffer, packedLight, texture);
-    }
-
     protected void renderLayer(GeoModel model, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, LivingEntity animatable,
                                float limbSwing, float limbSwingAmount, float partialTick, float rotFloat, float netHeadYaw,
                                float headPitch, MultiBufferSource bufferSource2, GeoItemLayerRenderer<T> layerRenderer) {
-        layerRenderer.render(model,poseStack, bufferSource, packedLight, animatable, limbSwing, limbSwingAmount, partialTick, rotFloat,
+        layerRenderer.render(model,this.armorSlot,poseStack, bufferSource, packedLight, animatable, limbSwing, limbSwingAmount, partialTick, rotFloat,
                 netHeadYaw, headPitch);
     }
+
     public final boolean addLayer(GeoItemLayerRenderer<T> layer) {
         return this.layerRenderers.add(layer);
     }

@@ -29,24 +29,20 @@ public class GoldenDetailsLayer<T extends WarHammerArmorItem> extends GeoItemLay
         super(entityRendererIn);
     }
 
-    public void render(GeoModel model, PoseStack pMatrixStack, MultiBufferSource pBuffer, int pPackedLight, LivingEntity pLivingEntity, float pLimbSwing, float pLimbSwingAmount, float pPartialTicks, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
-        renderGoldenDetails(model,EquipmentSlot.HEAD,pMatrixStack,pBuffer,pPackedLight,pLivingEntity,pLimbSwing,pLimbSwingAmount,pPartialTicks,pAgeInTicks,pNetHeadYaw,pHeadPitch);
-        renderGoldenDetails(model,EquipmentSlot.CHEST,pMatrixStack,pBuffer,pPackedLight,pLivingEntity,pLimbSwing,pLimbSwingAmount,pPartialTicks,pAgeInTicks,pNetHeadYaw,pHeadPitch);
-        renderGoldenDetails(model,EquipmentSlot.LEGS,pMatrixStack,pBuffer,pPackedLight,pLivingEntity,pLimbSwing,pLimbSwingAmount,pPartialTicks,pAgeInTicks,pNetHeadYaw,pHeadPitch);
-        renderGoldenDetails(model,EquipmentSlot.FEET,pMatrixStack,pBuffer,pPackedLight,pLivingEntity,pLimbSwing,pLimbSwingAmount,pPartialTicks,pAgeInTicks,pNetHeadYaw,pHeadPitch);
+    public void render(GeoModel model,EquipmentSlot slot, PoseStack pMatrixStack, MultiBufferSource pBuffer, int pPackedLight, LivingEntity pLivingEntity, float pLimbSwing, float pLimbSwingAmount, float pPartialTicks, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
+        renderGoldenDetails(model,slot,pMatrixStack,pBuffer,pPackedLight,pLivingEntity,pLimbSwing,pLimbSwingAmount,pPartialTicks,pAgeInTicks,pNetHeadYaw,pHeadPitch);
     }
 
     public void renderGoldenDetails(GeoModel model,EquipmentSlot slot, PoseStack pMatrixStack, MultiBufferSource pBuffer, int pPackedLight, LivingEntity pLivingEntity, float pLimbSwing, float pLimbSwingAmount, float pPartialTicks, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch){
         ItemStack stack=pLivingEntity.getItemBySlot(slot);
         if(stack.getItem() instanceof WarHammerArmorItem armor){
-            ((WarHammerArmorRenderer)getRenderer()).applySlot(slot);
+            ((WarHammerArmorRenderer<?>)getRenderer()).applySlot(slot);
             ResourceLocation texture=getTexture(armor.getFaction(stack));
             RenderType renderType = RenderType.armorCutoutNoCull(texture);
             VertexConsumer consumer=pBuffer.getBuffer(renderType);
             getRenderer().render(model,(T)armor,pPartialTicks,renderType,
                     pMatrixStack,pBuffer, consumer,pPackedLight, OverlayTexture.NO_OVERLAY,
                     1.0F,1.0F,1.0F,1.0F);
-
         }
     }
 

@@ -6,6 +6,7 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -20,7 +21,7 @@ public abstract class GeoItemLayerRenderer<T extends Item & IAnimatable> {
         this.entityRenderer = entityRendererIn;
     }
 
-    protected void renderCopyModel(GeoModelProvider<T> modelProvider,
+    protected void renderCopyModel(GeoModelProvider<T> modelProvider, EquipmentSlot slot,
                                    ResourceLocation texture, PoseStack poseStack, MultiBufferSource bufferSource,
                                    int packedLight, T animatable, float partialTick, float red, float green, float blue) {
         renderModel(modelProvider, texture, poseStack, bufferSource, packedLight, animatable,
@@ -56,7 +57,7 @@ public abstract class GeoItemLayerRenderer<T extends Item & IAnimatable> {
         return this.entityRenderer.getTextureLocation(entityIn);
     }
 
-    public abstract void render(GeoModel model, PoseStack matrixStackIn, MultiBufferSource bufferIn, int packedLightIn,
+    public abstract void render(GeoModel model,EquipmentSlot slot, PoseStack matrixStackIn, MultiBufferSource bufferIn, int packedLightIn,
                                 LivingEntity entityLivingBaseIn, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks,
                                 float netHeadYaw, float headPitch);
 }

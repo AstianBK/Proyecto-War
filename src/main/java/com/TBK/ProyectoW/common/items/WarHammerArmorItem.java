@@ -47,6 +47,12 @@ public class WarHammerArmorItem extends GeoArmorItem implements IAnimatable, Dye
         return faction;
     }
 
+    @Override
+    public int getColor(ItemStack p_41122_) {
+        CompoundTag compoundtag = p_41122_.getTagElement("display");
+        return compoundtag != null && compoundtag.contains("color", 99) ? compoundtag.getInt("color") : 16777215;
+    }
+
     public Factions getFaction() {
         return this.faction;
     }
@@ -59,6 +65,7 @@ public class WarHammerArmorItem extends GeoArmorItem implements IAnimatable, Dye
         this.faction=faction;
         this.saveFaction(stack,this.faction.name());
     }
+
     public CompoundTag saveFaction(ItemStack stack,String name){
         CompoundTag nbt=stack.getOrCreateTag();
         nbt.putString("faction",name);

@@ -2,6 +2,7 @@ package com.TBK.ProyectoW.client.layers;
 
 import com.TBK.ProyectoW.ProyectoWar;
 import com.TBK.ProyectoW.client.GeoItemLayerRenderer;
+import com.TBK.ProyectoW.client.renderers.WarHammerArmorRenderer;
 import com.TBK.ProyectoW.common.items.Factions;
 import com.TBK.ProyectoW.common.items.WarHammerArmorItem;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -21,8 +22,9 @@ public class EyeLayer<T extends WarHammerArmorItem> extends GeoItemLayerRenderer
     }
 
     @Override
-    public void render(GeoModel model, PoseStack matrixStackIn, MultiBufferSource pBuffer, int packedLightIn, LivingEntity entityLivingBaseIn, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void render(GeoModel model,EquipmentSlot slot, PoseStack matrixStackIn, MultiBufferSource pBuffer, int packedLightIn, LivingEntity entityLivingBaseIn, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         if(entityLivingBaseIn.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof WarHammerArmorItem armor){
+            ((WarHammerArmorRenderer)getRenderer()).applySlot(EquipmentSlot.HEAD);
             ResourceLocation texture=getTexture();
             RenderType renderType = RenderType.eyes(texture);
             VertexConsumer consumer=pBuffer.getBuffer(renderType);
