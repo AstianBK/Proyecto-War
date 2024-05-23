@@ -15,6 +15,7 @@ public class PWItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ProyectoWar.MODID);
 
+    //ARMOR
     public static final RegistryObject<Item> WARHAMMER_HELMET = ITEMS.register("warhammer_helmet",
             ()-> new WarHammerArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.HEAD,
                     props()));
