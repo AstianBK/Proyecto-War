@@ -1,4 +1,4 @@
-package com.TBK.ProyectoW.common.items;
+package com.TBK.SpaceMarines.common.items;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;

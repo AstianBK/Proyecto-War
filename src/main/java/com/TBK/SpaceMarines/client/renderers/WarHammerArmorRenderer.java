@@ -1,10 +1,10 @@
-package com.TBK.ProyectoW.client.renderers;
+package com.TBK.SpaceMarines.client.renderers;
 
-import com.TBK.ProyectoW.client.GeoItemLayerRenderer;
-import com.TBK.ProyectoW.client.layers.EyeLayer;
-import com.TBK.ProyectoW.client.layers.GoldenDetailsLayer;
-import com.TBK.ProyectoW.client.models.WarHammerArmorModel;
-import com.TBK.ProyectoW.common.items.WarHammerArmorItem;
+import com.TBK.SpaceMarines.client.GeoItemLayerRenderer;
+import com.TBK.SpaceMarines.client.layers.EyeLayer;
+import com.TBK.SpaceMarines.client.layers.GoldenDetailsLayer;
+import com.TBK.SpaceMarines.client.models.WarHammerArmorModel;
+import com.TBK.SpaceMarines.common.items.WarHammerArmorItem;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -16,19 +16,15 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.DyeableLeatherItem;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.fml.ModList;
-import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.compat.PatchouliCompat;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.geo.render.built.GeoBone;
 import software.bernie.geckolib3.geo.render.built.GeoModel;
-import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
-import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 import software.bernie.geckolib3.util.EModelRenderCycle;
 import software.bernie.geckolib3.util.RenderUtils;
 

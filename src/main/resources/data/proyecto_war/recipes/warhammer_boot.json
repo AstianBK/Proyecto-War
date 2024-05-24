@@ -4,9 +4,9 @@
     "item": "minecraft:diamond_boots"
   },
   "addition": {
-    "item": "proyecto_war:marine_armor_smithing_template"
+    "item": "space_marines:marine_armor_smithing_template"
   },
   "result": {
-    "item": "proyecto_war:warhammer_boot"
+    "item": "space_marines:warhammer_boot"
   }
 }

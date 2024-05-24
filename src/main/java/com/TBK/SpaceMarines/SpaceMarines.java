@@ -1,29 +1,25 @@
-package com.TBK.ProyectoW;
+package com.TBK.SpaceMarines;
 
-import com.TBK.ProyectoW.common.registry.PWItems;
-import com.TBK.ProyectoW.common.registry.PWtemProperties;
+import com.TBK.SpaceMarines.common.registry.PWItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-@Mod(ProyectoWar.MODID)
-public class ProyectoWar
+@Mod(SpaceMarines.MODID)
+public class SpaceMarines
 {
-    public static final String MODID = "proyecto_war";
+    public static final String MODID = "space_marines";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public ProyectoWar()
+    public SpaceMarines()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         PWItems.ITEMS.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 }

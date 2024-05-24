@@ -6,7 +6,7 @@ license="${mod_license}"
 
 [[mods]] #mandatory
 
-modId="proyecto_war" #mandatory
+modId="space_marines" #mandatory
 
 version="${mod_version}" #mandatory
 
@@ -16,7 +16,7 @@ authors="${mod_authors}" #optional
 
 description='''${mod_description}'''
 
-[[dependencies.proyecto_war]] #optional
+[[dependencies.space_marines]] #optional
 
 modId="forge" #mandatory
 
@@ -28,7 +28,7 @@ ordering="NONE"
 
 side="BOTH"
 
-[[dependencies.proyecto_war]]
+[[dependencies.space_marines]]
 modId="minecraft"
 mandatory=true
 versionRange="${minecraft_version_range}"

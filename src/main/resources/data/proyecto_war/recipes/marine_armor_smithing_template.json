@@ -7,7 +7,7 @@
   ],
   "key": {
     "i": {
-      "item": "proyecto_war:ceramite_ingot"
+      "item": "space_marines:ceramite_ingot"
     },
     "Q": {
       "item": "minecraft:quartz"
@@ -17,7 +17,7 @@
     }
   },
   "result": {
-    "item": "proyecto_war:marine_armor_smithing_template",
+    "item": "space_marines:marine_armor_smithing_template",
     "count": 1
   }
 }

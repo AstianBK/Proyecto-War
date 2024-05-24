@@ -1,11 +1,10 @@
-package com.TBK.ProyectoW.common.registry;
+package com.TBK.SpaceMarines.common.registry;
 
-import com.TBK.ProyectoW.ProyectoWar;
-import com.TBK.ProyectoW.common.items.Factions;
-import com.TBK.ProyectoW.common.items.TemplateWarhammerItem;
-import com.TBK.ProyectoW.common.items.WarHammerArmorItem;
+import com.TBK.SpaceMarines.SpaceMarines;
+import com.TBK.SpaceMarines.common.items.Factions;
+import com.TBK.SpaceMarines.common.items.TemplateWarhammerItem;
+import com.TBK.SpaceMarines.common.items.WarHammerArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class PWItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, ProyectoWar.MODID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, SpaceMarines.MODID);
 
     //ARMOR
     public static final RegistryObject<Item> WARHAMMER_HELMET = ITEMS.register("warhammer_helmet",

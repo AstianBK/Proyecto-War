@@ -1,17 +1,17 @@
 {
-  "item.proyecto_war.warhammer_helmet": "Marine Helmet",
-  "item.proyecto_war.warhammer_chest": "Marine Chestplate",
-  "item.proyecto_war.warhammer_leggings": "Marine Leggings",
-  "item.proyecto_war.warhammer_boot": "Marine Boots",
+  "item.space_marines.warhammer_helmet": "Marine Helmet",
+  "item.space_marines.warhammer_chest": "Marine Chestplate",
+  "item.space_marines.warhammer_leggings": "Marine Leggings",
+  "item.space_marines.warhammer_boot": "Marine Boots",
 
-  "item.proyecto_war.marine_armor_smithing_template": "Marine Upgrade Smithing Template",
-  "item.proyecto_war.royal_zealot_trim_template": "Royal Zealot Armor Trim Smithing Template",
-  "item.proyecto_war.proto_suit_trim_template": "Prototype Armor Trim Smithing Template",
-  "item.proyecto_war.infernal_chaos_trim_template": "Infernal Chaos Armor Trim Smithing Template",
-  "item.proyecto_war.holy_crusader_trim_template": "Holy Crusader Armor Trim Smithing Template",
-  "item.proyecto_war.silver_skull_trim_template": "Silver Skulls Armor Trim Smithing Template",
+  "item.space_marines.marine_armor_smithing_template": "Marine Upgrade Smithing Template",
+  "item.space_marines.royal_zealot_trim_template": "Royal Zealot Armor Trim Smithing Template",
+  "item.space_marines.proto_suit_trim_template": "Prototype Armor Trim Smithing Template",
+  "item.space_marines.infernal_chaos_trim_template": "Infernal Chaos Armor Trim Smithing Template",
+  "item.space_marines.holy_crusader_trim_template": "Holy Crusader Armor Trim Smithing Template",
+  "item.space_marines.silver_skull_trim_template": "Silver Skulls Armor Trim Smithing Template",
 
-  "item.proyecto_war.ceramite_ingot": "Ceramite Ingot",
+  "item.space_marines.ceramite_ingot": "Ceramite Ingot",
 
   "itemGroup.warhammer_tab": "Space Marines",
   "factions.decrip": "Faction:"

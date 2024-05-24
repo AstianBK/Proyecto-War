@@ -1,4 +1,4 @@
-package com.TBK.ProyectoW.common.items;
+package com.TBK.SpaceMarines.common.items;
 
 public enum Factions {
     NONE(null,false,false,false),
