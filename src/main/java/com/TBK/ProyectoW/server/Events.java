@@ -5,6 +5,8 @@ import com.TBK.ProyectoW.common.items.WarHammerArmorItem;
 import com.TBK.ProyectoW.common.registry.PWItems;
 import com.TBK.ProyectoW.common.registry.PWtemProperties;
 import net.minecraft.client.color.item.ItemColors;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.DyeableLeatherItem;
 import net.minecraft.world.item.ItemStack;
@@ -26,6 +28,7 @@ public class Events {
         ItemStack offHand=event.getEntity().getItemBySlot(EquipmentSlot.OFFHAND);
         if(book.getItem() instanceof WarHammerArmorItem armor && offHand.getItem() instanceof TemplateWarhammerItem template){
             armor.setFaction(template.getFaction(),book);
+            event.getEntity().playSound(SoundEvents.ANVIL_USE);
             if(!event.getEntity().getAbilities().instabuild){
                 offHand.shrink(1);
             }
