@@ -4,9 +4,9 @@
     "item": "minecraft:diamond_helmet"
   },
   "addition": {
-    "item": "proyecto_war:marine_armor_smithing_template"
+    "item": "space_marines:marine_armor_smithing_template"
   },
   "result": {
-    "item": "proyecto_war:warhammer_helmet"
+    "item": "space_marines:warhammer_helmet"
   }
 }

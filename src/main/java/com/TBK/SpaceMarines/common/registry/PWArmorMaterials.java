@@ -1,4 +1,4 @@
-package com.TBK.ProyectoW.common.registry;
+package com.TBK.SpaceMarines.common.registry;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -6,7 +6,6 @@ import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.entity.EquipmentSlot;
 
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
@@ -15,7 +14,6 @@ public enum PWArmorMaterials implements ArmorMaterial {
     CERAMITE("ceramite", 27, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 4F, 0.2F, () -> {
         return Ingredient.of(PWItems.CERAMITE_INGOT.get());
     }),
-
     ;
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};

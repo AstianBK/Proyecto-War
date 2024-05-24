@@ -1,16 +1,14 @@
-package com.TBK.ProyectoW.client.layers;
+package com.TBK.SpaceMarines.client.layers;
 
-import com.TBK.ProyectoW.ProyectoWar;
-import com.TBK.ProyectoW.client.GeoItemLayerRenderer;
-import com.TBK.ProyectoW.client.renderers.WarHammerArmorRenderer;
-import com.TBK.ProyectoW.common.items.Factions;
-import com.TBK.ProyectoW.common.items.WarHammerArmorItem;
-import com.mojang.blaze3d.systems.RenderSystem;
+import com.TBK.SpaceMarines.SpaceMarines;
+import com.TBK.SpaceMarines.client.GeoItemLayerRenderer;
+import com.TBK.SpaceMarines.client.renderers.WarHammerArmorRenderer;
+import com.TBK.SpaceMarines.common.items.Factions;
+import com.TBK.SpaceMarines.common.items.WarHammerArmorItem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -51,6 +49,6 @@ public class GoldenDetailsLayer<T extends WarHammerArmorItem> extends GeoItemLay
         if(factions.hasDetailGolden()){
             path=factions.getName();
         }
-        return new ResourceLocation(ProyectoWar.MODID,"textures/armor/golden_details/"+path+".png");
+        return new ResourceLocation(SpaceMarines.MODID,"textures/armor/golden_details/"+path+".png");
     }
 }

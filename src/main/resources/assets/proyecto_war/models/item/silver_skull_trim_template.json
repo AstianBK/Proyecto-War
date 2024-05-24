@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "proyecto_war:item/silver_skull_trim_template"
+    "layer0": "space_marines:item/silver_skull_trim_template"
   }
 }

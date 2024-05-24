@@ -1,10 +1,9 @@
-package com.TBK.ProyectoW.client.layers;
+package com.TBK.SpaceMarines.client.layers;
 
-import com.TBK.ProyectoW.ProyectoWar;
-import com.TBK.ProyectoW.client.GeoItemLayerRenderer;
-import com.TBK.ProyectoW.client.renderers.WarHammerArmorRenderer;
-import com.TBK.ProyectoW.common.items.Factions;
-import com.TBK.ProyectoW.common.items.WarHammerArmorItem;
+import com.TBK.SpaceMarines.SpaceMarines;
+import com.TBK.SpaceMarines.client.GeoItemLayerRenderer;
+import com.TBK.SpaceMarines.client.renderers.WarHammerArmorRenderer;
+import com.TBK.SpaceMarines.common.items.WarHammerArmorItem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -36,6 +35,6 @@ public class EyeLayer<T extends WarHammerArmorItem> extends GeoItemLayerRenderer
     }
 
     public ResourceLocation getTexture(){
-        return new ResourceLocation(ProyectoWar.MODID,"textures/armor/eye_details.png");
+        return new ResourceLocation(SpaceMarines.MODID,"textures/armor/eye_details.png");
     }
 }

@@ -1,6 +1,5 @@
-package com.TBK.ProyectoW.common.registry;
+package com.TBK.SpaceMarines.common.registry;
 
-import com.TBK.ProyectoW.common.registry.PWItems;
 import com.google.common.collect.Ordering;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;
