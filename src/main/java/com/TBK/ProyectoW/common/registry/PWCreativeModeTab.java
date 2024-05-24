@@ -18,7 +18,7 @@ public class PWCreativeModeTab {
 
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(PWItems.WARHAMMER_CHEST.get());
+            return new ItemStack(PWItems.WARHAMMER_HELMET.get());
         }
 
         @Override
@@ -31,6 +31,7 @@ public class PWCreativeModeTab {
 
     public static void PreOrdenInit(){
         List<Item> itemList= Arrays.asList(
+                PWItems.CERAMITE_INGOT.get(),
                 PWItems.WARHAMMER_HELMET.get(),
                 PWItems.WARHAMMER_CHEST.get(),
                 PWItems.WARHAMMER_LEGGINGS.get(),PWItems.WARHAMMER_BOOT.get(),

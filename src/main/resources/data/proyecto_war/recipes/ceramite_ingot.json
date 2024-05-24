@@ -1,23 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "iQi",
-    "QIQ",
-    "QQQ"
+    " ii",
+    "QDi",
+    "QQ "
   ],
   "key": {
     "i": {
-      "item": "proyecto_war:ceramite_ingot"
+      "item": "minecraft:iron_ingot"
     },
     "Q": {
       "item": "minecraft:quartz"
     },
-    "I": {
-      "item": "minecraft:iron_block"
+    "D": {
+      "item": "minecraft:diamond"
     }
   },
   "result": {
-    "item": "proyecto_war:marine_armor_smithing_template",
+    "item": "proyecto_war:ceramite_ingot",
     "count": 1
   }
 }
