@@ -12,7 +12,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum PWArmorMaterials implements ArmorMaterial {
-    CERAMITE("ceramite", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5F, 0.2F, () -> {
+    CERAMITE("ceramite", 27, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 4F, 0.2F, () -> {
         return Ingredient.of(PWItems.CERAMITE_INGOT.get());
     }),
 
