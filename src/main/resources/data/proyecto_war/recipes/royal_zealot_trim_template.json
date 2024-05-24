@@ -10,14 +10,14 @@
       "item": "minecraft:gold_ingot"
     },
     "I": {
-      "item": "proyecto_war:marine_armor_smithing_template"
+      "item": "space_marines:marine_armor_smithing_template"
     },
     "g": {
       "item": "minecraft:sunflower"
     }
   },
   "result": {
-    "item": "proyecto_war:royal_zealot_trim_template",
+    "item": "space_marines:royal_zealot_trim_template",
     "count": 1
   }
 }

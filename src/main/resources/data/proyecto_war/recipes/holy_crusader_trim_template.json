@@ -10,14 +10,14 @@
       "item": "minecraft:quartz"
     },
     "I": {
-      "item": "proyecto_war:marine_armor_smithing_template"
+      "item": "space_marines:marine_armor_smithing_template"
     },
     "g": {
       "item": "minecraft:gold_ingot"
     }
   },
   "result": {
-    "item": "proyecto_war:holy_crusader_trim_template",
+    "item": "space_marines:holy_crusader_trim_template",
     "count": 1
   }
 }

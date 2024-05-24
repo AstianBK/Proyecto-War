@@ -10,14 +10,14 @@
       "item": "minecraft:copper_ingot"
     },
     "I": {
-      "item": "proyecto_war:marine_armor_smithing_template"
+      "item": "space_marines:marine_armor_smithing_template"
     },
     "g": {
       "item": "minecraft:bone"
     }
   },
   "result": {
-    "item": "proyecto_war:proto_suit_trim_template",
+    "item": "space_marines:proto_suit_trim_template",
     "count": 1
   }
 }
