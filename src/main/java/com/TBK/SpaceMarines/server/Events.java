@@ -15,19 +15,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class Events {
 
     @SubscribeEvent
-    public static void onClickEvent(PlayerInteractEvent.RightClickItem event){
-        ItemStack book=event.getItemStack();
-        ItemStack offHand=event.getEntity().getItemBySlot(EquipmentSlot.OFFHAND);
-        if(book.getItem() instanceof WarHammerArmorItem armor && offHand.getItem() instanceof TemplateWarhammerItem template){
-            armor.setFaction(template.getFaction(),book);
-            event.getEntity().playSound(SoundEvents.ANVIL_USE);
-            if(!event.getEntity().getAbilities().instabuild){
-                offHand.shrink(1);
-            }
-        }
-    }
-
-    @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(PWtemProperties::register);
     }
